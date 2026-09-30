@@ -14,15 +14,18 @@
     
     <style>
         :root {
-            /* 네오 브루탈리즘 핵심 컬러 팔레트 */
-            --bg-color: #F4F0EB;
-            --black: #111111;
+            /* MADUP-inspired VIVID palette: Black + White + Electric Blue */
+            --bg-color: #FFFFFF;
+            --black: #050505;
             --white: #FFFFFF;
-            --cyan: #00E5FF;
-            --yellow: #FFD600;
-            --pink: #FFA6C9;
+            --cyan: #0057FF;
+            --yellow: #00D9FF;
+            --pink: #FF2DAA;
             --green: #00E676;
-            --purple: #9D00FF;
+            --purple: #6C2BFF;
+            --blue-soft: #EAF0FF;
+            --blue-pale: #F5F7FF;
+            --blue-mid: #8FB3FF;
             --border-width: 4px;
             --box-shadow: 8px 8px 0 var(--black);
             --box-shadow-hover: 12px 12px 0 var(--black);
@@ -40,6 +43,11 @@
             color: var(--black);
             line-height: 1.6;
             padding-bottom: 100px;
+        }
+
+        ::selection {
+            background-color: var(--cyan);
+            color: var(--white);
         }
 
         /* 중앙 정렬 컨테이너 */
@@ -140,7 +148,7 @@
             box-shadow: var(--box-shadow);
             border-radius: 12px;
             overflow: hidden;
-            background-color: #e0e0e0;
+            background-color: #E4EBF5;
             position: relative;
         }
 
@@ -170,7 +178,7 @@
 
         .profile-info h3 {
             font-size: 18px;
-            color: #555;
+            color: #52657D;
             margin-bottom: 25px;
             font-family: 'Space Mono', monospace;
         }
@@ -236,7 +244,7 @@
 
         .strength-text p {
             font-size: 14px;
-            color: #444;
+            color: #40536B;
             font-weight: 600;
         }
 
@@ -298,15 +306,15 @@
         .project-sub-title {
             font-size: 18px;
             font-weight: 600;
-            color: #777777; /* 약간 회색 폰트색 */
+            color: #718198;
         }
 
         .project-desc {
             font-size: 18px;
             font-weight: 600;
             margin-bottom: 30px;
-            color: #333;
-            background-color: #f9f9f9;
+            color: #2C4058;
+            background-color: #F5F8FC;
             padding: 20px;
             border-left: 4px solid var(--black);
             border-radius: 4px;
@@ -339,8 +347,8 @@
         }
 
         .tab-btn.active {
-            background-color: var(--black);
-            color: var(--yellow);
+            background-color: var(--cyan);
+            color: var(--white);
             box-shadow: 0 0 0 var(--black);
             transform: translate(4px, 4px);
         }
@@ -353,7 +361,7 @@
         }
         
         .outcome-card {
-            background-color: #F8F9FA;
+            background-color: #F3F6FA;
             border: 3px solid var(--black);
             border-radius: 8px;
             padding: 20px 25px;
@@ -430,11 +438,11 @@
         /* 추가된 이미지 캡션(설명) 스타일 */
         .window-caption {
             padding: 15px 20px;
-            background-color: #f8f9fa;
-            border-top: 2px dashed #ccc;
+            background-color: #F3F6FA;
+            border-top: 2px dashed #C8D4E3;
             font-size: 15px;
             font-weight: 700;
-            color: #333;
+            color: #2C4058;
             text-align: center;
             font-family: 'Space Mono', 'Noto Sans KR', sans-serif;
         }
@@ -463,20 +471,45 @@
             max-width: 650px;
             margin: 0 auto 40px;
             line-height: 1.8;
-            color: #ddd;
+            color: #D8E2EE;
         }
 
         .contact-box {
             display: inline-block;
-            background-color: var(--yellow);
-            color: var(--black);
+            background-color: var(--cyan);
+            color: var(--white);
             padding: 15px 30px;
             border: 3px solid var(--black);
-            box-shadow: 6px 6px 0 var(--pink);
+            box-shadow: 6px 6px 0 var(--blue-mid);
             border-radius: 12px;
             font-family: 'Space Mono', monospace;
             font-weight: 700;
             font-size: 18px;
+        }
+
+
+        /* PROJECT 영역: MADUP Blue로 통일 */
+        .folder-content .tag.blue,
+        .folder-content .tag.yellow,
+        .folder-content .tag.pink,
+        .folder-content .tag.green,
+        .folder-content .tag.purple {
+            background-color: var(--cyan);
+            color: var(--white);
+        }
+
+        .folder-content .project-desc {
+            border-left-color: var(--cyan);
+        }
+
+        .folder-content .tab-btn.active {
+            background-color: var(--cyan);
+            color: var(--white);
+        }
+
+        .folder-content .outcome-card h4 {
+            color: var(--cyan);
+            border-bottom-color: var(--cyan);
         }
 
         /* 반응형 모바일 최적화 */
@@ -497,7 +530,7 @@
     <div class="container">
         <header class="header-section">
             <div class="subtitle">MULTI-PLAYER MARKETER</div>
-            <h1>데이터로 <span>퍼포먼스를 증명</span>하고,<br>크리에이티브로 <span>콘텐츠를 완성</span>하는<br>멀티 플레이어 마케터입니다.</h1>
+            <h1>크리에이티브로 <span>콘텐츠를 완성</span>하고,<br>데이터로 <span>퍼포먼스를 증명</span>하는<br>멀티 플레이어 마케터입니다.</h1>
         </header>
 
         <section class="profile-grid neo-box">
@@ -522,7 +555,7 @@
                     <span class="tag green">Generative AI</span>
                     <span class="tag green">GA4/Meta Pixel</span>
                     <span class="tag green">Slack</span>
-                    <span class="tag green">R</span>
+                    <span class="tag green">Words</span>
                 </div>
             </div>
         </section>
@@ -573,19 +606,19 @@
             </div>
         </section>
 
-        <!-- PROJECT 01 -->
+        <!-- PROJECT 01 (기존 2번: 타깃 맞춤 콘텐츠 실험) -->
         <div class="folder-wrapper">
-            <div class="folder-tab" style="background-color: var(--cyan); color: var(--black);">PROJECT 01</div>
+            <div class="folder-tab" style="background-color: var(--cyan); color: var(--white);">PROJECT 01</div>
             <div class="folder-content">
-                <span class="tag blue">GA4</span>
-                <span class="tag blue">Meta Pixel</span>
-                <span class="tag blue">GAS 자동화</span>
+                <span class="tag blue">A/B Test</span>
+                <span class="tag blue">Threads</span>
+                <span class="tag blue">Instagram</span>
+                <span class="tag blue">Trends</span>
                 
                 <div class="project-header">
                     <div class="project-title-group">
-                        <!-- 프로젝트명이 없을 경우 아래 h3 태그 줄을 지워주세요 -->
-                        <h3 class="project-main-title">[ 북X플레이스 META 광고 집행 ]</h3>
-                        <div class="project-sub-title">실전 MarTech & 퍼포먼스 마케팅</div>
+                        <h3 class="project-main-title">[ 인스타그램&스레드 계정 운영 ]</h3>
+                        <div class="project-sub-title">타깃 맞춤 콘텐츠 실험 & 트렌드 잭킹</div>
                     </div>
                     <div class="project-inner-tabs">
                         <button class="tab-btn active" onclick="switchTab(this, 'p1-desc')">1. 프로젝트 미션</button>
@@ -595,13 +628,74 @@
                 </div>
 
                 <div id="p1-desc" class="tab-pane active">
-                    <p class="project-desc">&lt;북 큐레이션&gt; 서비스 인지도 확대 및 신규 잠재 고객(리드) 확보를 위한 프로젝트입니다.</p>
+                    <p class="project-desc">개인 스레드 및 인스타그램 채널 운영을 통해 SNS 스킬과 경험을 획득합니다.</p>
                     <ul class="info-list">
-                        <li><i class="fa-solid fa-caret-right"></i> <div><strong>해결 과제:</strong> 단순 클릭 유도에 그치지 않고, 광고 유입부터 실제 리드 획득 및 자료 다운로드까지 이어지는 풀퍼널 전환 구조 구축 및 이탈 구간 병목 해결</div></li>
+                        <li><i class="fa-solid fa-caret-right"></i> <div><strong>해결 과제:</strong>좋아하고 관심있는 콘텐츠를 실제로 SNS에서 콘텐츠화하고, 데이터 인사이트를 얻고 개선하는 사이클 경험 </div></li>
                     </ul>
                 </div>
 
                 <div id="p1-strategy" class="tab-pane">
+                    <ul class="info-list">
+                        <li><i class="fa-solid fa-caret-right"></i> <div><strong>독자 타겟 기반 A/B 테스트:</strong> 남성향 vs 여성향 독자의 선호 장르 및 소구점을 분리하여 가설을 세우고 실험 진행</div></li>
+                        <li><i class="fa-solid fa-caret-right"></i> <div><strong>트렌드 잭킹(Trend-Jacking):</strong> 환경의 날, 야구 시즌 등 이슈와 최신 플랫폼 밈을 빠르게 포착해 채널 톤에 맞춰 콘텐츠화</div></li>
+                        <li><i class="fa-solid fa-caret-right"></i> <div><strong>반응 데이터 모니터링:</strong> 업로드 직후 대시보드를 통해 반응(공유, 저장, 댓글)을 분석해 콘텐츠 개선</div></li>
+                    </ul>
+                </div>
+
+                <div석 id="p1-result" class="tab-pane">
+                    <div class="outcome-container">
+                        <div class="outcome-card">
+                            <h4>도달률 3배 이상 상승</h4>
+                            <p>타깃 맞춤형 텍스트 기획 및 트렌드 결합을 통해 <strong>평균 조회수 2,600회에서 7,800회로 상승</strong> 견인</p>
+                        </div>
+                        <div class="outcome-card">
+                            <h4>트렌드 감각 및 실무 적용 시각 체득</h4>
+                            <p>단순 이슈 소비를 넘어 <strong>대중의 관심사를 자사 콘텐츠 메시지와 자연스럽게 연결하는 기획력</strong> 확보</p>
+                        </div>
+                    </div>
+                    <div class="window-ui">
+                        <div class="window-bar">
+                            <div class="window-dot dot-r"></div>
+                            <div class="window-dot dot-y"></div>
+                            <div class="window-dot dot-g"></div>
+                        </div>
+                        <div class="window-body">
+                            <img src="./images/project2.png" alt="Project 1">
+                            <div class="window-caption">💡 독자 반응을 이끌어낸 트렌드 잭킹 콘텐츠 제작 및 데이터 인사이트 분석</div>
+                        </div>
+                    </div>
+                </div석
+            </div>
+        </div>
+
+        <!-- PROJECT 02 (기존 1번: 실전 MarTech & 퍼포먼스 마케팅) -->
+        <div class="folder-wrapper">
+            <div class="folder-tab" style="background-color: var(--cyan); color: var(--white);">PROJECT 02</div>
+            <div class="folder-content">
+                <span class="tag yellow">GA4</span>
+                <span class="tag yellow">Meta Pixel</span>
+                <span class="tag yellow">GAS 자동화</span>
+                
+                <div class="project-header">
+                    <div class="project-title-group">
+                        <h3 class="project-main-title">[ 북페어링 META 광고 집행 ]</h3>
+                        <div class="project-sub-title">실전 MarTech & 퍼포먼스 마케팅</div>
+                    </div>
+                    <div class="project-inner-tabs">
+                        <button class="tab-btn active" onclick="switchTab(this, 'p2-desc')">1. 프로젝트 미션</button>
+                        <button class="tab-btn" onclick="switchTab(this, 'p2-strategy')">2. 나의 전략</button>
+                        <button class="tab-btn" onclick="switchTab(this, 'p2-result')">3. 아웃풋 (결과)</button>
+                    </div>
+                </div>
+
+                <div id="p2-desc" class="tab-pane active">
+                    <p class="project-desc">&lt;북페어링&gt;을 주제로 META 광고를 통해 신규 잠재 고객(리드) 확보를 위한 프로젝트입니다.</p>
+                    <ul class="info-list">
+                        <li><i class="fa-solid fa-caret-right"></i> <div><strong>해결 과제:</strong> 단순 클릭 유도에 그치지 않고, 광고 유입부터 랜딩페이지 제작, 실제 리드 획득 및 자료 다운로드와 데이터 추까지 이어지는 풀퍼널 전환 구조 구축 및 이탈 구간 병목 해결</div></li>
+                    </ul>
+                </div>
+
+                <div id="p2-strategy" class="tab-pane">
                     <ul class="info-list">
                         <li><i class="fa-solid fa-caret-right"></i> <div><strong>데이터 추적 체계 구축:</strong> Meta Pixel 및 GA4 맞춤 이벤트를 랜딩페이지에 심어 유입부터 리드 수집, 다운로드까지 전 여정 트래킹 세팅</div></li>
                         <li><i class="fa-solid fa-caret-right"></i> <div><strong>CRM 자동화 파이프라인 연동:</strong> GAS(Google Apps Script)와 웹 호스팅을 연동해 폼 제출 즉시 맞춤 이메일이 자동 발송되는 약식 CRM 환경 구현</div></li>
@@ -609,7 +703,7 @@
                     </ul>
                 </div>
 
-                <div id="p1-result" class="tab-pane">
+                <div id="p2-result" class="tab-pane">
                     <div class="outcome-container">
                         <div class="outcome-card">
                             <h4>효율적 트래픽 유입</h4>
@@ -627,71 +721,8 @@
                             <div class="window-dot dot-g"></div>
                         </div>
                         <div class="window-body">
-                            <img src="./images/project1.png" alt="Project 1">
+                            <img src="./images/project1.png" alt="Project 2">
                             <div class="window-caption">💡 유입부터 전환까지 트래킹 가능한 랜딩페이지 및 GAS 자동화 이메일 세팅 화면</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- PROJECT 02 -->
-        <div class="folder-wrapper">
-            <div class="folder-tab" style="background-color: var(--yellow); color: var(--black);">PROJECT 02</div>
-            <div class="folder-content">
-                <span class="tag yellow">A/B Test</span>
-                <span class="tag yellow">Threads</span>
-                <span class="tag yellow">Instagram</span>
-                <span class="tag yellow">Trends</span>
-                
-                <div class="project-header">
-                    <div class="project-title-group">
-                        <!-- 프로젝트명이 없을 경우 아래 h3 태그 줄을 지워주세요 -->
-                        <h3 class="project-main-title">[ 인스타그램&스레드 계정 운영 ]</h3>
-                        <div class="project-sub-title">타깃 맞춤 콘텐츠 실험 & 트렌드 잭킹</div>
-                    </div>
-                    <div class="project-inner-tabs">
-                        <button class="tab-btn active" onclick="switchTab(this, 'p2-desc')">1. 프로젝트 미션</button>
-                        <button class="tab-btn" onclick="switchTab(this, 'p2-strategy')">2. 나의 전략</button>
-                        <button class="tab-btn" onclick="switchTab(this, 'p2-result')">3. 아웃풋 (결과)</button>
-                    </div>
-                </div>
-
-                <div id="p2-desc" class="tab-pane active">
-                    <p class="project-desc">스레드(Threads) 및 인스타그램 오가닉 채널의 초기 독자층 유입 및 인게이지먼트를 확대하는 미션입니다.</p>
-                    <ul class="info-list">
-                        <li><i class="fa-solid fa-caret-right"></i> <div><strong>해결 과제:</strong> 감에 의존한 일방적 포스팅을 벗어나, 독자 성향별 니즈를 공략하고 시의성 높은 트렌드를 채널 성장에 접목</div></li>
-                    </ul>
-                </div>
-
-                <div id="p2-strategy" class="tab-pane">
-                    <ul class="info-list">
-                        <li><i class="fa-solid fa-caret-right"></i> <div><strong>독자층 세분화 기반 A/B 테스트:</strong> 남성향 vs 여성향 독자의 선호 장르 및 소구점을 분리하여 가설을 세우고 실험 진행</div></li>
-                        <li><i class="fa-solid fa-caret-right"></i> <div><strong>기민한 트렌드 잭킹(Trend-Jacking):</strong> 성년의 날, 야구 시즌 등 이슈와 최신 플랫폼 밈을 빠르게 포착해 채널 톤에 맞춰 콘텐츠화</div></li>
-                        <li><i class="fa-solid fa-caret-right"></i> <div><strong>반응 데이터 모니터링:</strong> 업로드 직후 초기 반응(공유, 저장, 댓글)을 분석해 포맷 위주로 업로드 주기 최적화</div></li>
-                    </ul>
-                </div>
-
-                <div id="p2-result" class="tab-pane">
-                    <div class="outcome-container">
-                        <div class="outcome-card">
-                            <h4>도달률 3배 이상 상승</h4>
-                            <p>타깃 맞춤형 텍스트 기획 및 트렌드 결합을 통해 <strong>평균 조회수 2,600회에서 7,800회로 상승</strong> 견인</p>
-                        </div>
-                        <div class="outcome-card">
-                            <h4>트렌드 센싱 및 실무 적용 시각 체득</h4>
-                            <p>단순 이슈 소비를 넘어 <strong>대중의 관심사를 자사 콘텐츠 메시지와 자연스럽게 연결하는 기획력</strong> 확보</p>
-                        </div>
-                    </div>
-                    <div class="window-ui">
-                        <div class="window-bar">
-                            <div class="window-dot dot-r"></div>
-                            <div class="window-dot dot-y"></div>
-                            <div class="window-dot dot-g"></div>
-                        </div>
-                        <div class="window-body">
-                            <img src="./images/project2.png" alt="Project 2">
-                            <div class="window-caption">💡 독자 반응을 이끌어낸 트렌드 잭킹 콘텐츠 및 오가닉 도달률 상승 지표</div>
                         </div>
                     </div>
                 </div>
@@ -700,7 +731,7 @@
 
         <!-- PROJECT 03 -->
         <div class="folder-wrapper">
-            <div class="folder-tab" style="background-color: var(--pink); color: var(--black);">PROJECT 03</div>
+            <div class="folder-tab" style="background-color: var(--cyan); color: var(--white);">PROJECT 03</div>
             <div class="folder-content">
                 <span class="tag pink">Funnel</span>
                 <span class="tag pink">Media Mix</span>
@@ -709,7 +740,6 @@
                 
                 <div class="project-header">
                     <div class="project-title-group">
-                        <!-- 프로젝트명이 없을 경우 아래 h3 태그 줄을 지워주세요 -->
                         <h3 class="project-main-title">[ 배리웨이 광고 기획 및 미디어 믹스 ]</h3>
                         <div class="project-sub-title">데이터 기반 리텐션 미디어 믹스 전략</div>
                     </div>
@@ -723,7 +753,7 @@
                 <div id="p3-desc" class="tab-pane active">
                     <p class="project-desc">식사 대용 쉐이크 브랜드 '배리웨이'의 신규 유입 대비 저조한 재구매 및 이탈 문제를 해결하기 위한 프로젝트입니다.</p>
                     <ul class="info-list">
-                        <li><i class="fa-solid fa-caret-right"></i> <div><strong>해결 과제:</strong> 특정 매체에 편중된 비효율적 예산 구조를 개선하고, 퍼널 단계별 이탈을 방어하는 최적의 미디어 믹스 수립</div></li>
+                        <li><i class="fa-solid fa-caret-right"></i> <div><strong>해결 과제:</strong> 특정 매체에 편중된 비효율적 예산 구조를 개선하고, 퍼널 단계별 이탈을 방어하는 최적의 미디어 믹 수립</div></li>
                     </ul>
                 </div>
 
@@ -763,7 +793,7 @@
 
         <!-- PROJECT 04 -->
         <div class="folder-wrapper">
-            <div class="folder-tab" style="background-color: var(--green); color: var(--black);">PROJECT 04</div>
+            <div class="folder-tab" style="background-color: var(--cyan); color: var(--white);">PROJECT 04</div>
             <div class="folder-content">
                 <span class="tag green">Campaign</span>
                 <span class="tag green">Interactive Video</span>
@@ -771,7 +801,6 @@
                 
                 <div class="project-header">
                     <div class="project-title-group">
-                        <!-- 프로젝트명이 없을 경우 아래 h3 태그 줄을 지워주세요 -->
                         <h3 class="project-main-title">[ Find Your Real Korea ]</h3>
                         <div class="project-sub-title">한국 여행 유튜브 인터랙티브 비디오 캠페인</div>
                     </div>
@@ -792,7 +821,7 @@
                 <div id="p4-strategy" class="tab-pane">
                     <ul class="info-list">
                         <li><i class="fa-solid fa-caret-right"></i> <div><strong>페르소나 맞춤 플로우 설계:</strong> 2030 외국인 여성 타깃의 성향을 반영해 '생기 넘치는 낮' vs '빛나는 밤'을 선택하는 분기형 시나리오 기획</div></li>
-                        <li><i class="fa-solid fa-caret-right"></i> <div><strong>Gen-AI 멀티 툴 파이프라인 구축:</strong> FLOW(영상), SUNO(음악), CapCut(편집)을 결합해 비주얼·사운드 에셋을 직접 생성 및 조립</div></li>
+                        <li><i class="fa-solid fa-caret-right"></i> <div><strong>여러 툴을 활용한 영상 제작:</strong> FLOW(영상), SUNO(음악), CapCut(편집)을 결합해 비주얼·사운드 에셋을 직접 생성 및 조립</div></li>
                         <li><i class="fa-solid fa-caret-right"></i> <div><strong>데이터 벤치마킹 기반 목표 설정:</strong> 유사 공공 채널 데이터 분석을 통한 실현 가능한 메인 KPI 모델링</div></li>
                     </ul>
                 </div>
@@ -825,7 +854,7 @@
 
         <!-- PROJECT 05 -->
         <div class="folder-wrapper">
-            <div class="folder-tab" style="background-color: var(--purple); color: var(--white);">PROJECT 05</div>
+            <div class="folder-tab" style="background-color: var(--cyan); color: var(--white);">PROJECT 05</div>
             <div class="folder-content">
                 <span class="tag purple">Business Analysis</span>
                 <span class="tag purple">KPI Rebuilding</span>
@@ -833,7 +862,6 @@
                 
                 <div class="project-header">
                     <div class="project-title-group">
-                        <!-- 프로젝트명이 없을 경우 아래 h3 태그 줄을 지워주세요 -->
                         <h3 class="project-main-title">[ 남성복/아웃도어 브랜드 KPI 재설정 ]</h3>
                         <div class="project-sub-title">비즈니스 KPI 리빌딩 경험</div>
                     </div>
@@ -888,7 +916,8 @@
 
     <section class="ending-section">
         <h2>I Design SYNERGY</h2>
-        <p>데이터로 정확하게 길을 찾고, 매력적인 콘텐츠로 고객의 발길을 이끕니다.<br>숫자(분석)와 이야기(기획)를 동시에 다루는 마케터로서 눈에 보이는 확실한 성장을 만들어내겠습니다.</p>
+        <p>내가 좋아하는 것들을 남들도 좋아할 수 있도록, 또한 오랫동안 마음에 남을 수 있는 콘텐츠를 만들 수 있는 마케터가 되고 싶습니다.
+<br></p>
         <div class="contact-box">
             <i class="fa-solid fa-envelope" style="margin-right:10px;"></i> han0944@kakao.com<br>
             <i class="fa-solid fa-mobile-screen-button" style="margin-right:10px;"></i> 010-5482-0944
